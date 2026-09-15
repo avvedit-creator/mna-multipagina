@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Participá — Movimiento Nacional Artiguista</title>
+<meta name="description" content="Sumate al Movimiento Nacional Artiguista: escribinos, contactate por nuestras redes o creá tu cuenta en la Comunidad.">
+<link rel="icon" href="assets/img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor encabezado__barra">
+    <a href="index.html" class="marca">
+      <img src="assets/img/logo.jpg" alt="Escudo del Movimiento Nacional Artiguista">
+      <span class="marca__texto">
+        <strong>Movimiento Nacional</strong>
+        <span>ARTIGUISTA</span>
+      </span>
+    </a>
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="principios.html">Principios</a>
+      <a href="propuestas.html">Propuestas</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="participa.html" aria-current="page">Participá</a>
+      <a href="comunidad.html" class="boton boton-rojo" style="padding:10px 20px;">Comunidad</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="pagina-hero">
+    <div class="contenedor">
+      <p class="eyebrow">Sumate</p>
+      <h1>Participá</h1>
+      <p class="pagina-hero__lead">La construcción de un mejor país también se hace desde la ciudadanía. Escribinos y te contactamos.</p>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="seccion-dividida seccion-dividida--participa">
+        <form class="formulario" id="form-participa">
+          <div class="campo">
+            <label for="participa-nombre">Nombre y apellido</label>
+            <input type="text" id="participa-nombre" required>
+          </div>
+          <div class="campo">
+            <label for="participa-email">Correo electrónico</label>
+            <input type="email" id="participa-email" required>
+          </div>
+          <div class="campo">
+            <label for="participa-ciudad">Ciudad</label>
+            <input type="text" id="participa-ciudad">
+          </div>
+          <div class="campo">
+            <label for="participa-mensaje">Mensaje</label>
+            <textarea id="participa-mensaje" rows="4" placeholder="Contanos cómo querés participar"></textarea>
+          </div>
+          <button type="submit" class="boton boton-primario" style="width:100%;">Enviar</button>
+          <div class="mensaje-envio" id="mensaje-envio">¡Gracias! Recibimos tu mensaje y te vamos a contactar a la brevedad.</div>
+        </form>
+
+        <div class="vias-contacto">
+          <div class="via-contacto">
+            <div class="via-contacto__icono">✉</div>
+            <div>
+              <h4>Correo</h4>
+              <p><a href="mailto:contacto@mna.uy">contacto@mna.uy</a></p>
+            </div>
+          </div>
+          <div class="via-contacto">
+            <div class="via-contacto__icono">IG</div>
+            <div>
+              <h4>Instagram</h4>
+              <p><a href="https://www.instagram.com/movimiento_nacionalartiguista/" target="_blank" rel="noopener">@movimiento_nacionalartiguista</a></p>
+            </div>
+          </div>
+          <div class="via-contacto">
+            <div class="via-contacto__icono">★</div>
+            <div>
+              <h4>Comunidad digital</h4>
+              <p>Creá tu cuenta para comentar, publicar en el muro y escribirle directo a la administración. <a href="comunidad.html">Ir a Comunidad →</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <p class="pie__lema">Por la Patria, la Justicia y la Soberanía Nacional</p>
+    <div class="pie__grid">
+      <div>
+        <div class="pie__marca">
+          <img src="assets/img/logo.jpg" alt="Escudo del Movimiento Nacional Artiguista">
+          <strong>Movimiento Nacional Artiguista</strong>
+        </div>
+        <p>Movimiento de índole nacionalista y artiguista de tercera posición en Uruguay. Soberanismo y nacionalismo integrador.</p>
+      </div>
+      <div>
+        <h4>Recorré el sitio</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="principios.html">Principios</a></li>
+          <li><a href="propuestas.html">Propuestas</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="participa.html">Participá</a></li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Seguinos</h4>
+        <div class="pie__redes">
+          <a href="https://www.instagram.com/movimiento_nacionalartiguista/" target="_blank" rel="noopener">IG</a>
+          <a href="mailto:contacto@mna.uy">✉</a>
+        </div>
+      </div>
+    </div>
+    <div class="pie__inferior">
+      <span>© 2026 Movimiento Nacional Artiguista.</span>
+      <span>Uruguay 🇺🇾</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/backend.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

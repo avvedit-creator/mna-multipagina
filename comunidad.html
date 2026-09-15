@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comunidad — Movimiento Nacional Artiguista</title>
+<meta name="description" content="Creá tu cuenta, participá del muro, escribile a la administración y enterate primero de las novedades del Movimiento Nacional Artiguista.">
+<link rel="icon" href="assets/img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  .comunidad-envoltorio { max-width: 760px; margin: 0 auto; }
+</style>
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor encabezado__barra">
+    <a href="index.html" class="marca">
+      <img src="assets/img/logo.jpg" alt="Escudo del Movimiento Nacional Artiguista">
+      <span class="marca__texto">
+        <strong>Movimiento Nacional</strong>
+        <span>ARTIGUISTA</span>
+      </span>
+    </a>
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="principios.html">Principios</a>
+      <a href="propuestas.html">Propuestas</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="participa.html">Participá</a>
+      <a href="comunidad.html" class="boton boton-rojo" style="padding:10px 20px;" aria-current="page">Comunidad</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="pagina-hero">
+    <div class="contenedor">
+      <p class="eyebrow">Comunidad digital</p>
+      <h1>Comunidad</h1>
+      <p class="pagina-hero__lead">Comentá, publicá en el muro y escribile directo a la administración del movimiento.</p>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor comunidad-envoltorio">
+
+      <div class="banner-demo">
+        <span>⚠️</span>
+        <div><strong>Modo demostración:</strong> cuentas y publicaciones se guardan solo en este navegador.</div>
+      </div>
+
+      <!-- Vista sin sesión -->
+      <div id="vista-invitado">
+        <p class="comunidad-nota">Podés ver todo el contenido del movimiento sin crear una cuenta. Para comentar, publicar o chatear, iniciá sesión.</p>
+
+        <button type="button" class="boton-google" id="boton-google">
+          <span class="boton-google__icono">G</span> Continuar con Gmail
+        </button>
+
+        <div class="pestanas pestanas--chicas" style="margin-top:18px;">
+          <button type="button" class="pestana activa" data-auth="login">Ingresar</button>
+          <button type="button" class="pestana" data-auth="registro">Crear cuenta</button>
+        </div>
+
+        <form id="form-login">
+          <div class="error-form" id="error-login"></div>
+          <div class="campo">
+            <label for="login-email">Correo electrónico</label>
+            <input type="email" id="login-email" required>
+          </div>
+          <div class="campo">
+            <label for="login-clave">Contraseña</label>
+            <input type="password" id="login-clave" required>
+          </div>
+          <button type="submit" class="boton boton-primario" style="width:100%;">Ingresar</button>
+          <button type="button" class="enlace-recuperar" id="abrir-recuperar">¿Olvidaste tu contraseña?</button>
+        </form>
+
+        <form id="form-registro" style="display:none;">
+          <div class="error-form" id="error-registro"></div>
+          <div class="campo">
+            <label for="registro-nombre">Nombre y apellido</label>
+            <input type="text" id="registro-nombre" required>
+          </div>
+          <div class="campo">
+            <label for="registro-email">Correo electrónico</label>
+            <input type="email" id="registro-email" required>
+          </div>
+          <div class="campo">
+            <label for="registro-clave">Contraseña</label>
+            <input type="password" id="registro-clave" required minlength="4">
+          </div>
+          <button type="submit" class="boton boton-primario" style="width:100%;">Crear cuenta</button>
+        </form>
+
+        <form id="form-recuperar" style="display:none;">
+          <p style="font-size:.85rem;color:#445069;">Ingresá el correo de tu cuenta. Si está registrado, enviamos instrucciones a tu Gmail para restablecer la contraseña.</p>
+          <div class="campo">
+            <label for="recuperar-email">Correo electrónico</label>
+            <input type="email" id="recuperar-email" required>
+          </div>
+          <button type="submit" class="boton boton-secundario" style="width:100%;">Enviar instrucciones</button>
+          <div class="mensaje-envio" id="mensaje-recuperar">Listo, revisá tu Gmail. (En este modo demo no se envía un correo real.)</div>
+          <button type="button" class="enlace-recuperar" id="volver-login">← Volver a ingresar</button>
+        </form>
+
+        <p class="credenciales-demo">Para probar el panel de administración usá: <strong>admin@mna.uy</strong> / <strong>admin123</strong>.</p>
+      </div>
+
+      <!-- Vista con sesión iniciada -->
+      <div id="vista-sesion" style="display:none;">
+        <div class="cabecera-sesion">
+          <div class="cabecera-sesion__saludo">Hola, <strong id="saludo-nombre"></strong><span class="insignia-rol" id="insignia-rol" style="display:none;">Admin</span></div>
+          <button class="boton boton-secundario boton-chico" id="boton-salir">Salir</button>
+        </div>
+
+        <div class="pestanas">
+          <button type="button" class="pestana activa" data-panel="muro">Muro</button>
+          <button type="button" class="pestana" data-panel="mensajes">Mensajes</button>
+          <button type="button" class="pestana" data-panel="admin" id="pestana-admin" style="display:none;">Admin</button>
+        </div>
+
+        <!-- Muro -->
+        <div class="panel-pestana activo" id="panel-muro">
+          <form id="form-post" class="form-post">
+            <label for="post-texto" style="font-weight:700;font-size:.85rem;">Compartir en el muro</label>
+            <textarea id="post-texto" rows="3" placeholder="¿Qué querés compartir?" required style="margin-top:8px;width:100%;"></textarea>
+            <div class="form-post__pie">
+              <label class="selector-archivo">📷 Imagen<input type="file" id="post-imagen" accept="image/*"></label>
+              <button type="submit" class="boton boton-primario boton-chico">Publicar</button>
+            </div>
+            <div class="previsualizacion" id="post-preview"><img alt="Previsualización de imagen"><button type="button" id="post-preview-quitar">✕</button></div>
+            <p style="font-size:.78rem;color:#8b93a7;margin:10px 0 0;">Tu publicación queda <strong>pendiente de aprobación</strong>.</p>
+          </form>
+          <div id="lista-muro"></div>
+        </div>
+
+        <!-- Mensajes con el equipo -->
+        <div class="panel-pestana" id="panel-mensajes">
+          <p style="color:#445069;font-size:.9rem;">Conversación privada con la administración.</p>
+          <div class="hilo-mensajes" id="hilo-mensajes"></div>
+          <form id="form-mensaje" class="form-mensaje">
+            <input type="text" id="mensaje-texto" placeholder="Escribí tu mensaje..." required>
+            <button type="submit" class="boton boton-primario boton-chico">Enviar</button>
+          </form>
+        </div>
+
+        <!-- Panel de administración -->
+        <div class="panel-pestana" id="panel-admin">
+          <div class="admin-subnav">
+            <button type="button" class="activa" data-admin="pendientes">Moderación</button>
+            <button type="button" data-admin="usuarios">Usuarios</button>
+            <button type="button" data-admin="mensajes">Mensajes</button>
+            <button type="button" data-admin="novedades">Novedades</button>
+            <button type="button" data-admin="documentos">Documentos</button>
+            <button type="button" data-admin="colaborar">Colaborar</button>
+          </div>
+
+          <div class="admin-panel activo" id="admin-pendientes">
+            <h3 style="font-size:1rem;">Publicaciones y comentarios pendientes</h3>
+            <div class="tabla-moderacion" id="lista-pendientes"></div>
+          </div>
+
+          <div class="admin-panel" id="admin-usuarios">
+            <h3 style="font-size:1rem;">Usuarios registrados</h3>
+            <div class="tabla-usuarios" id="lista-usuarios"></div>
+          </div>
+
+          <div class="admin-panel" id="admin-mensajes">
+            <div class="lista-hilos" id="lista-hilos"></div>
+            <div class="hilo-mensajes" id="hilo-admin-mensajes"></div>
+            <form id="form-admin-mensaje" class="form-mensaje" style="display:none;">
+              <input type="text" id="admin-mensaje-texto" placeholder="Responder..." required>
+              <button type="submit" class="boton boton-primario boton-chico">Enviar</button>
+            </form>
+          </div>
+
+          <div class="admin-panel" id="admin-novedades">
+            <form id="form-novedad" class="form-novedad">
+              <h3 style="font-size:1.05rem;margin-top:0;">Publicar novedad</h3>
+              <div class="error-form" id="error-novedad"></div>
+              <div class="campo">
+                <label for="novedad-titulo">Título</label>
+                <input type="text" id="novedad-titulo" required>
+              </div>
+              <div class="campo">
+                <label for="novedad-texto">Texto</label>
+                <textarea id="novedad-texto" rows="3" required></textarea>
+              </div>
+              <div class="campo">
+                <label for="novedad-video">Link de video (YouTube, opcional)</label>
+                <input type="url" id="novedad-video" placeholder="https://www.youtube.com/watch?v=...">
+              </div>
+              <div class="campo-fila">
+                <div class="campo">
+                  <label>Imagen (opcional)</label>
+                  <label class="selector-archivo">🖼️ Elegir imagen<input type="file" id="novedad-imagen" accept="image/*"></label>
+                </div>
+                <div class="campo">
+                  <label>Documento PDF (opcional)</label>
+                  <label class="selector-archivo">📄 Elegir PDF<input type="file" id="novedad-pdf" accept="application/pdf"></label>
+                </div>
+              </div>
+              <button type="submit" class="boton boton-primario">Publicar novedad</button>
+            </form>
+            <h3 style="font-size:1rem;">Novedades publicadas</h3>
+            <div class="lista-novedades-admin" id="lista-novedades-admin"></div>
+          </div>
+
+          <div class="admin-panel" id="admin-documentos">
+            <form id="form-documento" class="form-novedad">
+              <h3 style="font-size:1.05rem;margin-top:0;">Publicar documento</h3>
+              <div class="error-form" id="error-documento"></div>
+              <div class="campo">
+                <label for="documento-titulo">Título</label>
+                <input type="text" id="documento-titulo" required>
+              </div>
+              <div class="campo">
+                <label for="documento-descripcion">Descripción (opcional)</label>
+                <textarea id="documento-descripcion" rows="2"></textarea>
+              </div>
+              <label class="selector-archivo">📄 Elegir PDF<input type="file" id="documento-archivo" accept="application/pdf" required></label>
+              <button type="submit" class="boton boton-primario" style="width:100%;margin-top:12px;">Publicar documento</button>
+            </form>
+            <h3 style="font-size:1rem;">Documentos publicados</h3>
+            <div class="lista-novedades-admin" id="lista-documentos-admin"></div>
+          </div>
+
+          <div class="admin-panel" id="admin-colaborar">
+            <h3 style="font-size:1rem;">Colaboración económica</h3>
+            <form id="form-colaborar">
+              <label class="campo-checkbox">
+                <input type="checkbox" id="colaborar-activo">
+                Mostrar sección de colaboración económica en la página
+              </label>
+              <div class="campo">
+                <label for="colaborar-texto">Texto</label>
+                <textarea id="colaborar-texto" rows="2"></textarea>
+              </div>
+              <div class="campo">
+                <label for="colaborar-datos">Datos de transferencia</label>
+                <textarea id="colaborar-datos" rows="2"></textarea>
+              </div>
+              <button type="submit" class="boton boton-primario">Guardar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Colaboración económica (pública) ===== -->
+  <div class="contenedor comunidad-envoltorio" id="colaborar-bloque" hidden>
+    <div class="tarjeta-colaborar">
+      <h2>Colaborá con el movimiento</h2>
+      <p id="colaborar-texto-publico"></p>
+      <p class="colaborar-datos" id="colaborar-datos-publico"></p>
+    </div>
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <p class="pie__lema">Por la Patria, la Justicia y la Soberanía Nacional</p>
+    <div class="pie__grid">
+      <div>
+        <div class="pie__marca">
+          <img src="assets/img/logo.jpg" alt="Escudo del Movimiento Nacional Artiguista">
+          <strong>Movimiento Nacional Artiguista</strong>
+        </div>
+        <p>Movimiento de índole nacionalista y artiguista de tercera posición en Uruguay. Soberanismo y nacionalismo integrador.</p>
+      </div>
+      <div>
+        <h4>Recorré el sitio</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="principios.html">Principios</a></li>
+          <li><a href="propuestas.html">Propuestas</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="participa.html">Participá</a></li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Seguinos</h4>
+        <div class="pie__redes">
+          <a href="https://www.instagram.com/movimiento_nacionalartiguista/" target="_blank" rel="noopener">IG</a>
+          <a href="mailto:contacto@mna.uy">✉</a>
+        </div>
+      </div>
+    </div>
+    <div class="pie__inferior">
+      <span>© 2026 Movimiento Nacional Artiguista.</span>
+      <span>Uruguay 🇺🇾</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/backend.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/comunidad.js"></script>
+</body>
+</html>

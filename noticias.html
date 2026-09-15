@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noticias — Movimiento Nacional Artiguista</title>
+<meta name="description" content="Novedades, comunicados y documentos oficiales del Movimiento Nacional Artiguista.">
+<link rel="icon" href="assets/img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor encabezado__barra">
+    <a href="index.html" class="marca">
+      <img src="assets/img/logo.jpg" alt="Escudo del Movimiento Nacional Artiguista">
+      <span class="marca__texto">
+        <strong>Movimiento Nacional</strong>
+        <span>ARTIGUISTA</span>
+      </span>
+    </a>
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="principios.html">Principios</a>
+      <a href="propuestas.html">Propuestas</a>
+      <a href="noticias.html" aria-current="page">Noticias</a>
+      <a href="participa.html">Participá</a>
+      <a href="comunidad.html" class="boton boton-rojo" style="padding:10px 20px;">Comunidad</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="pagina-hero">
+    <div class="contenedor">
+      <p class="eyebrow">Actualidad</p>
+      <h1>Noticias y comunicados</h1>
+      <p class="pagina-hero__lead">Enterate de las actividades, comunicados oficiales y documentos del Movimiento Nacional Artiguista.</p>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="seccion__cabecera">
+        <p class="eyebrow">Novedades</p>
+        <h2>Últimas publicaciones</h2>
+      </div>
+      <div class="grilla-3" id="lista-novedades-publico"></div>
+    </div>
+  </section>
+
+  <section class="seccion seccion--alterna">
+    <div class="contenedor" style="max-width:760px;">
+      <div class="seccion__cabecera">
+        <p class="eyebrow">Documentos</p>
+        <h2>Documentos oficiales</h2>
+        <p>Manifiesto, actas e informes del movimiento.</p>
+      </div>
+      <div id="lista-documentos-publico" class="lista-documentos"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <p class="pie__lema">Por la Patria, la Justicia y la Soberanía Nacional</p>
+    <div class="pie__grid">
+      <div>
+        <div class="pie__marca">
+          <img src="assets/img/logo.jpg" alt="Escudo del Movimiento Nacional Artiguista">
+          <strong>Movimiento Nacional Artiguista</strong>
+        </div>
+        <p>Movimiento de índole nacionalista y artiguista de tercera posición en Uruguay. Soberanismo y nacionalismo integrador.</p>
+      </div>
+      <div>
+        <h4>Recorré el sitio</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="principios.html">Principios</a></li>
+          <li><a href="propuestas.html">Propuestas</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="participa.html">Participá</a></li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Seguinos</h4>
+        <div class="pie__redes">
+          <a href="https://www.instagram.com/movimiento_nacionalartiguista/" target="_blank" rel="noopener">IG</a>
+          <a href="mailto:contacto@mna.uy">✉</a>
+        </div>
+      </div>
+    </div>
+    <div class="pie__inferior">
+      <span>© 2026 Movimiento Nacional Artiguista.</span>
+      <span>Uruguay 🇺🇾</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/backend.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/noticias.js"></script>
+</body>
+</html>
