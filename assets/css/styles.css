@@ -119,7 +119,7 @@ p { margin: 0 0 1em; }
   gap: 12px;
   font-family: var(--fuente-titulo);
 }
-.marca img { width: 48px; height: 48px; object-fit: contain; border-radius: 8px; }
+.marca img { width: auto; height: 56px; object-fit: contain; }
 .marca__texto { line-height: 1.05; }
 .marca__texto strong { display: block; font-size: 1rem; color: var(--azul); }
 .marca__texto span { display: block; font-size: .68rem; letter-spacing: .08em; color: var(--rojo); font-weight: 700; }
