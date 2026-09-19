@@ -245,10 +245,7 @@ p { margin: 0 0 1em; }
 .seccion--video .seccion__cabecera h2 { color: #fff; }
 .hero--video .seccion__video-fondo { inset: 0 0 auto 0; height: 150%; object-position: center top; }
 .hero__logo { display: flex; align-items: center; justify-content: center; }
-.hero__logo img {
-  width: min(100%, 380px);
-  filter: drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 16px rgba(255,255,255,.7));
-}
+.hero__logo img { width: min(100%, 380px); border-radius: 14px; }
 .hero--video > .contenedor { position: relative; z-index: 2; }
 .hero--video .eyebrow { color: #fff; }
 .hero--video .eyebrow::before { background: #fff; }
