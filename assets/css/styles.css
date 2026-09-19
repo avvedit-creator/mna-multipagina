@@ -238,11 +238,14 @@ p { margin: 0 0 1em; }
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; z-index: 0;
 }
+.seccion__video-fondo--sin-bandas { transform: scale(1.15); }
 .seccion__video-capa { position: absolute; inset: 0; background: rgba(6,10,20,.55); z-index: 1; }
 .seccion--video > .contenedor { position: relative; z-index: 2; }
 .seccion--video .seccion__cabecera p.eyebrow { color: #fff; }
 .seccion--video .seccion__cabecera p.eyebrow::before { background: #fff; }
 .seccion--video .seccion__cabecera h2 { color: #fff; }
+.seccion--video .cta-video h2,
+.seccion--video .cta-video p { color: #fff; }
 .seccion__cabecera { max-width: 720px; margin-bottom: 44px; }
 .seccion__cabecera p { color: #33415c; font-size: 1.05rem; }
 
