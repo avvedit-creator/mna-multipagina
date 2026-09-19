@@ -243,6 +243,7 @@ p { margin: 0 0 1em; }
 .seccion--video .seccion__cabecera p.eyebrow { color: #fff; }
 .seccion--video .seccion__cabecera p.eyebrow::before { background: #fff; }
 .seccion--video .seccion__cabecera h2 { color: #fff; }
+.hero--video .seccion__video-fondo { inset: 0 0 auto 0; height: 150%; object-position: center top; }
 .hero--video > .contenedor { position: relative; z-index: 2; }
 .hero--video .eyebrow { color: #fff; }
 .hero--video .eyebrow::before { background: #fff; }
