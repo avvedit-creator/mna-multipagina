@@ -243,8 +243,13 @@ p { margin: 0 0 1em; }
 .seccion--video .seccion__cabecera p.eyebrow { color: #fff; }
 .seccion--video .seccion__cabecera p.eyebrow::before { background: #fff; }
 .seccion--video .seccion__cabecera h2 { color: #fff; }
-.seccion--video .cta-video h2,
-.seccion--video .cta-video p { color: #fff; }
+.hero--video > .contenedor { position: relative; z-index: 2; }
+.hero--video .eyebrow { color: #fff; }
+.hero--video .eyebrow::before { background: #fff; }
+.hero--video h1,
+.hero--video .hero__lead { color: #fff; }
+.hero--video .boton-secundario { border-color: #fff; color: #fff; }
+.hero--video .boton-secundario:hover { background: #fff; color: var(--azul); }
 .seccion__cabecera { max-width: 720px; margin-bottom: 44px; }
 .seccion__cabecera p { color: #33415c; font-size: 1.05rem; }
 
