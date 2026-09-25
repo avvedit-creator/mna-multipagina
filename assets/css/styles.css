@@ -143,6 +143,8 @@ p { margin: 0 0 1em; }
 .nav-principal a.boton-rojo[aria-current="page"] {
   color: var(--blanco);
   font-weight: 700;
+  padding: 14px 28px;
+  border-radius: var(--radio);
   border-color: transparent;
 }
 
