@@ -327,7 +327,7 @@ p { margin: 0 0 1em; }
 .admin-mensajes-grid > * { min-width: 0; }
 
 .tarjeta {
-  background: var(--blanco);
+  background: rgba(255, 255, 255, .82);
   border: 1px solid var(--borde);
   border-radius: var(--radio);
   padding: 28px;
