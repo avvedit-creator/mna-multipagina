@@ -216,7 +216,7 @@ p { margin: 0 0 1em; }
   background: var(--azul);
   color: var(--blanco);
   text-align: center;
-  padding: 34px 24px;
+  padding: 56px 24px;
   position: relative;
 }
 .franja-lema::before {
@@ -229,6 +229,16 @@ p { margin: 0 0 1em; }
   font-family: var(--fuente-titulo);
   font-size: clamp(1.05rem, 2.2vw, 1.55rem);
   letter-spacing: .02em;
+}
+.franja-lema .eyebrow { justify-content: center; }
+.franja-lema__texto {
+  font-family: var(--fuente-texto);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  letter-spacing: normal;
+  max-width: 640px;
+  margin: 0 auto 26px;
+  color: rgba(255,255,255,.88);
 }
 
 /* ---------- Secciones genéricas ---------- */
