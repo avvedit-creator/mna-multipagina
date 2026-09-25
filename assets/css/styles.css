@@ -245,8 +245,6 @@ p { margin: 0 0 1em; }
 }
 .franja-lema__botones { display: flex; flex-direction: column; gap: 14px; }
 .franja-lema__botones .boton { width: 100%; }
-.boton-paypal { background: #ffc439; color: #1a1a1a; }
-.boton-paypal:hover { background: #ffb703; }
 
 /* ---------- Secciones genéricas ---------- */
 .seccion { padding: 76px 24px; }
