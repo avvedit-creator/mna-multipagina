@@ -285,12 +285,12 @@ p { margin: 0 0 1em; }
 .accion__figura {
   position: absolute;
   left: 0;
-  bottom: 0;
-  height: 260px;
+  top: 0;
+  height: 100%;
   width: auto;
   z-index: -1;
   object-fit: contain;
-  object-position: bottom left;
+  object-position: top left;
   transform: translateX(-140%);
   transition: transform 1.1s cubic-bezier(.22,.75,.25,1);
 }
