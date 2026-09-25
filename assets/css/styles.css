@@ -280,6 +280,35 @@ p { margin: 0 0 1em; }
 .seccion__cabecera { max-width: 720px; margin-bottom: 44px; }
 .seccion__cabecera p { color: #33415c; font-size: 1.05rem; }
 
+/* ---------- Figura de Artigas en "Nuestra acción" ---------- */
+.accion__figura-espacio { display: none; }
+@media (min-width: 1300px) {
+  .seccion--accion { position: relative; overflow: hidden; }
+  .accion__fila { display: flex; align-items: flex-end; }
+  .accion__fila > .contenedor { flex: 0 0 auto; width: min(100%, var(--ancho-maximo)); margin: 0; }
+  .accion__figura-espacio {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  .accion__figura {
+    height: 420px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+    transform: translateX(-140%);
+    transition: transform 1.1s cubic-bezier(.22,.75,.25,1);
+  }
+  .seccion--accion.en-vista .accion__figura { transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .accion__figura { transition: none; }
+}
+
 .pagina-hero {
   padding: 56px 24px 44px;
   border-bottom: 1px solid var(--borde);

@@ -12,6 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const seccionAccion = document.querySelector(".seccion--accion");
+  if (seccionAccion && "IntersectionObserver" in window) {
+    const observador = new IntersectionObserver(
+      (entradas, obs) => {
+        entradas.forEach((entrada) => {
+          if (entrada.isIntersecting) {
+            seccionAccion.classList.add("en-vista");
+            obs.unobserve(entrada.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    observador.observe(seccionAccion);
+  } else if (seccionAccion) {
+    seccionAccion.classList.add("en-vista");
+  }
+
   const formulario = document.querySelector("#form-participa");
   if (formulario) {
     formulario.addEventListener("submit", (evento) => {
