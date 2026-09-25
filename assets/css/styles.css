@@ -278,6 +278,8 @@ p { margin: 0 0 1em; }
 .hero--video .boton-secundario { border-color: #fff; color: #fff; }
 .hero--video .boton-secundario:hover { background: #fff; color: var(--azul); }
 .seccion__cabecera { max-width: 720px; margin-bottom: 44px; }
+.seccion--accion .seccion__cabecera { margin-left: auto; margin-right: auto; text-align: center; }
+.seccion--accion .eyebrow { justify-content: center; }
 .seccion__cabecera p { color: #33415c; font-size: 1.05rem; }
 
 /* ---------- Figura de Artigas en "Nuestra acción" (de fondo) ---------- */
