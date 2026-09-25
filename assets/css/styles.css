@@ -175,6 +175,7 @@ p { margin: 0 0 1em; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
+  z-index: 0;
   overflow: hidden;
   background:
     radial-gradient(1100px 500px at 85% -10%, rgba(180,50,50,.10), transparent 60%),
@@ -218,6 +219,7 @@ p { margin: 0 0 1em; }
   text-align: center;
   padding: 56px 24px;
   position: relative;
+  z-index: 0;
   overflow: hidden;
 }
 .franja-lema::before {
@@ -247,7 +249,7 @@ p { margin: 0 0 1em; }
 .seccion { padding: 76px 24px; }
 .seccion--alterna { background: var(--blanco); border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); }
 
-.seccion--video { position: relative; overflow: hidden; }
+.seccion--video { position: relative; z-index: 0; overflow: hidden; }
 .seccion__video-fondo {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; z-index: -2;
