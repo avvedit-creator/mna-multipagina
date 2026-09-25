@@ -216,7 +216,7 @@ p { margin: 0 0 1em; }
 .franja-lema {
   background: var(--azul);
   color: var(--blanco);
-  padding: 120px 24px;
+  padding: 176px 24px;
   position: relative;
   z-index: 0;
   overflow: hidden;
