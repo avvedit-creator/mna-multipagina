@@ -246,6 +246,7 @@ p { margin: 0 0 1em; }
 .seccion--video .seccion__cabecera p.eyebrow::before { background: #fff; }
 .seccion--video .seccion__cabecera h2 { color: #fff; }
 .hero--video .seccion__video-fondo { inset: 0 0 auto 0; height: 150%; object-position: center top; }
+.franja-video { position: relative; overflow: hidden; height: 505px; }
 .hero__cita { display: inline-block; text-align: center; max-width: 100%; }
 .hero__cita .hero__lead {
   text-align: left;
