@@ -216,8 +216,7 @@ p { margin: 0 0 1em; }
 .franja-lema {
   background: var(--azul);
   color: var(--blanco);
-  text-align: center;
-  padding: 56px 24px;
+  padding: 120px 24px;
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -227,23 +226,27 @@ p { margin: 0 0 1em; }
   position: absolute; top: 0; left: 0; right: 0; height: 4px;
   background: var(--rojo);
 }
-.franja-lema p {
-  margin: 0;
-  font-family: var(--fuente-titulo);
-  font-size: clamp(1.05rem, 2.2vw, 1.55rem);
-  letter-spacing: .02em;
+.franja-lema__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+  align-items: center;
 }
-.franja-lema .eyebrow { justify-content: center; }
+.franja-lema .eyebrow { color: var(--blanco); }
+.franja-lema .eyebrow::before { background: var(--blanco); }
 .franja-lema__texto {
   font-family: var(--fuente-texto);
   font-size: 1.05rem;
   line-height: 1.65;
   letter-spacing: normal;
   text-align: justify;
-  max-width: 640px;
-  margin: 0 auto 26px;
+  margin: 0;
   color: rgba(255,255,255,.88);
 }
+.franja-lema__botones { display: flex; flex-direction: column; gap: 14px; }
+.franja-lema__botones .boton { width: 100%; }
+.boton-paypal { background: #ffc439; color: #1a1a1a; }
+.boton-paypal:hover { background: #ffb703; }
 
 /* ---------- Secciones genéricas ---------- */
 .seccion { padding: 76px 24px; }
@@ -882,6 +885,8 @@ p { margin: 0 0 1em; }
 @media (max-width: 900px) {
   .hero__grid { grid-template-columns: 1fr; }
   .hero__grafico { order: -1; max-width: 420px; margin: 0 auto; }
+  .franja-lema__grid { grid-template-columns: 1fr; }
+  .franja-lema__botones .boton { width: auto; }
   .grilla-3 { grid-template-columns: 1fr 1fr; }
   .pie__grid { grid-template-columns: 1fr 1fr; }
   .encabezado__barra--hub { flex-wrap: wrap; }
